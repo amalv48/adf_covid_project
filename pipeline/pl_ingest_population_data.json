@@ -57,7 +57,7 @@
 				}
 			},
 			{
-				"name": "If Condition",
+				"name": "If File exists",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
@@ -70,7 +70,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@activity('Check if File Exist').output",
+						"value": "@equals(activity('Get File Metadata').output.exists, true)",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
