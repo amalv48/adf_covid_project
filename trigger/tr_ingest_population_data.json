@@ -8,7 +8,7 @@
 		"typeProperties": {
 			"blobPathBeginsWith": "/population/blobs/population_by_age.tsv.gz",
 			"ignoreEmptyBlobs": true,
-			"scope": "/subscriptions/dd32bb1e-bacf-446c-a8f1-3844234c3083/resourceGroups/adf_udemy/providers/Microsoft.Storage/storageAccounts/covidreporting1701",
+			"scope": "/subscriptions/2ab9bcbc-6115-48c3-953c-c34a800e3546/resourceGroups/adf_etl_project/providers/Microsoft.Storage/storageAccounts/blobadfetl012022",
 			"events": [
 				"Microsoft.Storage.BlobCreated"
 			]
