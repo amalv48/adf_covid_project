@@ -70,7 +70,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(activity('Get File Metadata').output.columnCount, 13)",
+						"value": "@activity('Check if File Exist').output",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
