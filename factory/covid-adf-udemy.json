@@ -1,0 +1,9 @@
+{
+	"name": "covid-adf-udemy",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cc5c408d-1c98-4ce4-8bb9-6a7cdbc5af26",
+		"tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921"
+	}
+}
