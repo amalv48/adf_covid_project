@@ -1,8 +1,8 @@
 {
-	"name": "ds_population_raw_tsv",
+	"name": "ds_sink_population_raw_tsv",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_adls_covidreporting1701dl",
+			"referenceName": "ls_datalake_covid",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
