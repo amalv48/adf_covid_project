@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfetl012022"
+		},
+		"ls_ablob_covidreporting1701_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreporting1701dl_accountKey": {
+			"value": ""
+		},
+		"ls_blob_covid_connectionString": {
+			"value": ""
+		},
+		"ls_datalake_covid_accountKey": {
+			"value": ""
+		},
+		"ls_adls_covidreporting1701dl_properties_typeProperties_url": {
+			"value": "https://covidreporting1701dl.dfs.core.windows.net"
+		},
+		"ls_datalake_covid_properties_typeProperties_url": {
+			"value": "https://adlsadfetl012022.dfs.core.windows.net"
+		},
+		"ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"tr_ingest_population_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/2ab9bcbc-6115-48c3-953c-c34a800e3546/resourceGroups/adf_etl_project/providers/Microsoft.Storage/storageAccounts/blobadfetl012022"
+		}
+	}
+}
