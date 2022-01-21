@@ -6,15 +6,26 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "ds_raw_hospital_admission",
+						"referenceName": "ds_country_lookup",
 						"type": "DatasetReference"
 					},
-					"name": "hospitalAdmission"
+					"name": "countryLookup"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_raw_hospitals_admission",
+						"type": "DatasetReference"
+					},
+					"name": "hospitalAdmissionData"
 				}
 			],
 			"sinks": [],
-			"transformations": [],
-			"script": "source(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string,\n\t\tColumn_7 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> hospitalAdmission"
+			"transformations": [
+				{
+					"name": "FilterEuAndIndiaOnly"
+				}
+			],
+			"script": "source(output(\n\t\tcountry as string,\n\t\tcountry_code_2_digit as string,\n\t\tcountry_code_3_digit as string,\n\t\tcontinent as string,\n\t\tpopulation as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> countryLookup\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> hospitalAdmissionData\nhospitalAdmissionData filter('country' == 'United Kingdom' && 'India') ~> FilterEuAndIndiaOnly"
 		}
 	}
 }
